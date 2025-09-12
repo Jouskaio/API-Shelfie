@@ -50,4 +50,5 @@ Thumbs.db
 
 # Application specific
 application-local.properties
+.env
 !/.env
