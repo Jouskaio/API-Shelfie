@@ -107,3 +107,4 @@ REST API interface:
 - [ ] Implement library sharing features
 - [ ] Add book cover image support
 - [ ] Deploy with Docker containerization
+- [ ] Set up CI/CD pipeline
