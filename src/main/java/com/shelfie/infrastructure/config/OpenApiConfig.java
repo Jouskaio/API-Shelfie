@@ -17,14 +17,14 @@ public class OpenApiConfig {
     public OpenAPI apiDocumentation() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("API-Shelfie")
+                        .title("Shelfie")
                         .description("Digital library management API for scanned books")
                         .version("1.0.0")
                         .contact(new Contact()
-                                .name("Shelfie Team")
-                                .email("support@shelfie.com"))
+                                .name("Shelfie")
+                                .email("contact@jouskaio.me"))
                         .license(new License()
                                 .name("MIT License")
-                                .url("https://opensource.org/licenses/MIT")));
+                                .url("https://github.com/Jouskaio/API-Shelfie/blob/main/LICENSE")));
     }
 }
