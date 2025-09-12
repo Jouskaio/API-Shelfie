@@ -55,14 +55,14 @@ REST API interface:
    ```
 
 3. **Access the API**:
-   - Application: http://localhost:8080
-   - API Documentation: http://localhost:8080/swagger-ui.html
-   - H2 Database Console: http://localhost:8080/h2-console
+   - Application: http://localhost:8081
+   - API Documentation: http://localhost:8081/swagger-ui.html
+   - OpenAPI Spec: http://localhost:8081/v3/api-docs
 
 4. **Test the API**:
    ```bash
    # Add a book
-   curl -X POST http://localhost:8080/api/v1/books \
+   curl -X POST http://localhost:8081/api/v1/books \
      -H "Content-Type: application/json" \
      -d '{
        "title": "Clean Architecture",
@@ -74,7 +74,7 @@ REST API interface:
      }'
    
    # Get all books
-   curl http://localhost:8080/api/v1/books
+   curl http://localhost:8081/api/v1/books
    ```
 
 ### Development
@@ -85,8 +85,7 @@ REST API interface:
 
 ### Database
 
-- **Development**: H2 in-memory database
-- **Production**: PostgreSQL (configuration ready)
+- PostgreSQL (configuration ready)
 
 ### Key Features
 
