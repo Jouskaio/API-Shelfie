@@ -15,6 +15,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       JAVA_TOOL_OPTIONS: "-Dspring.devtools.restart.poll-interval=1s -Dspring.devtools.restart.quiet-period=300ms"
+      SECURITY_JWT_SECRET: ${SECURITY_JWT_SECRET}
     volumes:
       - .:/app
       - ~/.m2:/root/.m2
