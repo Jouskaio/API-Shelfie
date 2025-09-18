@@ -6,8 +6,6 @@ import com.shelfie.application.dto.LoginRequestDto;
 import com.shelfie.application.dto.RegisterRequestDto;
 import com.shelfie.infrastructure.persistence.repository.JpaUserRepository;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -61,13 +59,12 @@ public class AuthController {
     )
     @PostMapping(value = "/register", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public AuthResponseDto register(@ModelAttribute RegisterForm form) {
-        // IMPORTANT : on mappe le "password" de la form vers le "rawPassword" du DTO
         var dto = new RegisterRequestDto(
                 form.getUsername(),
                 form.getEmail(),
                 form.getFirstName(),
                 form.getLastName(),
-                form.getPassword()                // => rawPassword du DTO
+                form.getPassword()
         );
         return auth.register(dto, form.getAvatar());
     }
