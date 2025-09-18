@@ -27,3 +27,4 @@ replay_pid*
 .env
 .ideatarget/
 !/target/
+.mvn
